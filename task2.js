@@ -172,8 +172,17 @@ printStudentReport(kawther);
 // وتستدعي printStudentReport لكل طالب
 // ---------------------------------------
 function printAllStudents() {
-    // اكتب الكود هنا
+    if (students.length === 0) {
+        console.log("لا يوجد طلاب بعد.");
+        return;
+    }
+
+    for (let i = 0; i < students.length; i++) {
+        printStudentReport(students[i]);
+    }
 }
+printAllStudents();
+
 
 
 
@@ -184,9 +193,15 @@ function printAllStudents() {
 // إذا ما لقت ترجع undefined
 // ---------------------------------------
 function findStudentByName(name) {
-    // اكتب الكود هنا (اختياري)
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].name === name) {
+            return students[i]; 
+        }
+    }
+    return undefined; 
 }
-
+let student1 = findStudentByName("kawther");
+console.log(student1);
 
 
 // =======================================
@@ -200,11 +215,11 @@ function findStudentByName(name) {
 // مثال تخطيط (هم يملوه):
 //
 // const s1 = createStudent("Ali", 20);
-// const s2 = createStudent("Sara", 22);
+// const shahad = createStudent("Sara", 22);
 // const s3 = createStudent("Noor", 19);
 //
 // addStudent(s1);
-// addStudent(s2);
+// addStudent(shahad);
 // addStudent(s3);
 //
 // addGrade(s1, 80);
@@ -217,4 +232,21 @@ function findStudentByName(name) {
 //
 // =======================================
 
-// اكتب كود التنفيذ هنا:
+const ahmed = createStudent("ahmed", 20);
+const shahad = createStudent("shahad", 22);
+const Noor = createStudent("Noor", 19);
+
+addStudent(ahmed);
+addStudent(shahad);
+addStudent(Noor);
+
+addGrade(ahmed, 60);
+addGrade(ahmed, 55);
+addGrade(ahmed, 90);
+addGrade(shahad, 50);
+addGrade(shahad, 40);
+addGrade(shahad, 33);
+addGrade(Noor, 77);
+addGrade(Noor, 69);
+
+printAllStudents();

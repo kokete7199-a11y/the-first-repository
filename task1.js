@@ -145,7 +145,7 @@ console.log(appraisalGrades(95));
 
 
 function loopTest(i){
-for (i=1;i<=10;i++){
+for ( let i=1;i<=10;i++){
     console.log(i)
 }
 };
@@ -160,7 +160,14 @@ loopTest();
 //     خزّن الناتج في متغير total واطبعه بالنهاية
 
 
-
+function summationOfNumber (i){
+    let total=0;
+for (let i=1;i<=100;i++){
+    total += i;
+}
+console.log(total);
+};
+summationOfNumber();
 
 
 // --- حل السؤال 10 هنا ---
@@ -172,6 +179,22 @@ loopTest();
 //     اكتب لوب يحسب كم مرة يتكرر الحرف 'l'
 //     وخزّن العدد في متغير count ثم اطبعه
 
+
+ let text = "hello world";
+ let count=0;
+function countOfChar(){
+    for ( let i=0;i<text.length;i++){
+        if (text[i] === 'l') {
+            count++ ;
+        }
+    }
+   console.log(count);
+};
+
+ countOfChar();
+
+
+
 // --- حل السؤال 11 هنا ---
 
 
@@ -179,6 +202,19 @@ loopTest();
 // 12) اكتب دالة باسم countEven(n)
 //     ترجع عدد الأرقام الزوجية من 1 إلى n.
 //     مثال: countEven(10) ترجع 5 (2,4,6,8,10)
+
+
+function countEven(n){
+    let count=0;
+for (let i=1; i<=n ; i++){
+if (i%2 === 0){
+    count++; 
+}
+
+}
+console.log(count);
+};
+ countEven(10);
 
 // --- حل السؤال 12 هنا ---
 
@@ -188,6 +224,23 @@ loopTest();
 //     ترجع مجموع الأرقام الفردية من 1 إلى n.
 //     مثال: sumOdd(5) ترجع 9 (1 + 3 + 5)
 
+
+function sumOdd(n){
+    let sum=0;
+for (let i=0; i<=n;i++){
+    if (i%2 !== 0){
+     sum+=i
+    }
+}
+console.log(sum);
+return(sum);
+};
+
+sumOdd(5);
+
+
+
+
 // --- حل السؤال 13 هنا ---
 
 
@@ -195,5 +248,17 @@ loopTest();
 // 14) اكتب دالة باسم factorial(n)
 //     تحسب حاصل ضرب الأرقام من 1 إلى n.
 //     مثال: factorial(5) = 1*2*3*4*5 = 120
+
+function factorial(n){
+    let fact=1;
+for (let i=1;i<=n;i++){
+fact*=i;
+}
+console.log(fact);
+return fact;
+};
+
+factorial(5);
+
 
 // --- حل السؤال 14 هنا ---

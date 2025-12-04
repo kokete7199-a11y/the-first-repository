@@ -25,18 +25,37 @@ let nextId = 1;
 // }
 // ---------------------------------------
 function createStudent(name, age) {
-    // اكتب الكود هنا
+    const student = {
+        id: nextId,   
+        name: name,    
+        age: age,     
+        grades: []    
+    };
+    nextId++; 
+    return student; 
 }
 
+let sara = createStudent("sara", 28);
+let kawther = createStudent("kawther", 25);
 
+   
 
 // ---------------------------------------
 // TODO 2:
 // دالة تضيف طالب إلى مصفوفة students
 // ---------------------------------------
 function addStudent(student) {
-    // اكتب الكود هنا
+students[students.length] = student;
+ 
 }
+addStudent(sara);
+addStudent(kawther);
+
+
+console.log(students);
+
+   
+
 
 
 
@@ -46,12 +65,21 @@ function addStudent(student) {
 // تضيف الدرجة إلى student.grades
 // ---------------------------------------
 function addGrade(student, grade) {
-    // اكتب الكود هنا
+ student.grades[student.grades.length] = grade;
 }
+addGrade(kawther, 95);
+addGrade(kawther, 90);
+addGrade(sara, 80);
+addGrade(sara, 70);
+
+
+console.log(students);
+    
 
 
 
-// ---------------------------------------
+
+// // ---------------------------------------
 // TODO 4:
 // دالة تحسب معدّل درجات طالب
 // إذا ما عنده درجات ترجع 0
@@ -59,8 +87,28 @@ function addGrade(student, grade) {
 // وترجع sum / عدد الدرجات
 // ---------------------------------------
 function getAverage(student) {
-    // اكتب الكود هنا
+
+const grades =student.grades;
+
+if (grades.length === 0){
+    return 0;
 }
+
+
+let sum =0;
+for (let i=0; i<grades.length ; i++){
+    sum+=grades[i];
+}
+
+return sum/grades.length;
+
+}
+let averageSara = getAverage(sara);
+let averageKawther = getAverage(kawther);
+console.log("Average Sara:", averageSara);
+console.log("Average Kawther:", averageKawther);
+
+
 
 
 
@@ -72,8 +120,16 @@ function getAverage(student) {
 // غير ذلك → "راسب"
 // ---------------------------------------
 function getStatus(student) {
-    // اكتب الكود هنا
+     const average = getAverage(student); 
+    if (average >= 50 ){
+        return "ناجح";
+    }
+    else{
+        return "راسب"
+    }
 }
+console.log("Sara:", getStatus(sara));     
+console.log("Kawther:", getStatus(kawther));
 
 
 
@@ -89,8 +145,22 @@ function getStatus(student) {
 // إذا ماكو درجات تطبع: Grades: لا توجد درجات بعد
 // ---------------------------------------
 function printStudentReport(student) {
-    // اكتب الكود هنا
+    console.log("========================================");
+    console.log(`Student #${student.id} - ${student.name} (Age: ${student.age})`);
+    
+    if (student.grades.length === 0) {
+     console.log("Grades: لا توجد درجات بعد");
+    } else {
+     console.log("Grades: " + student.grades);
+    }
+
+    console.log("Average: " + getAverage(student));
+    console.log("Status: " + getStatus(student));
 }
+printStudentReport(sara);
+printStudentReport(kawther);
+
+
 
 
 

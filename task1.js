@@ -18,8 +18,11 @@ console.log("sum : " + summation(2,2));
 // 2) عندك متغير minutes.
 //    حوّله إلى ثواني (seconds) واطبع الناتج.
 //    مثال: إذا minutes = 5 الناتج = 300
-
-
+function convertMinutesToSeconds(minutes){
+const convert=minutes*60
+return convert
+};
+console.log(convertMinutesToSeconds(5))
 
 // --- حل السؤال 2 هنا ---
 
@@ -30,7 +33,10 @@ console.log("sum : " + summation(2,2));
 //    مثل: square(4) ترجع 16
 // الناتج: 300
 
-
+function square(x){
+return x*x;
+};
+console.log(square(4))
 // --- حل السؤال 3 هنا ---
 
 
@@ -40,6 +46,15 @@ console.log("sum : " + summation(2,2));
 //    مثل: maxOfTwo(8, 3) ترجع 8
 // الناتج: 8
 
+function maxOfTwo(a,b){
+if (a>b){
+    return a;
+}
+else {
+    return b;
+}
+};
+console.log(maxOfTwo(8,3));
 
 // --- حل السؤال 4 هنا ---
 
@@ -48,6 +63,11 @@ console.log("sum : " + summation(2,2));
 // 5) اكتب دالة باسم helloName
 //    تستقبل اسم وترجع نص: "Hello " مع الاسم.
 //    مثل: helloName("Ali") ترجع "Hello Ali"
+
+function helloName(name){
+return ("Hello "+ name)
+};
+console.log(helloName("Ali"));
 
 
 // --- حل السؤال 5 هنا ---

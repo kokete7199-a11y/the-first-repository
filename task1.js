@@ -79,7 +79,15 @@ console.log(helloName("Ali"));
 //    إذا زوجي اطبع "Even" إذا فردي اطبع "Odd"
 
 
-
+function check(num){
+  if (num % 2 === 0) {
+    return "Even";
+  } 
+  else {
+    return "Odd";
+  }
+}
+console.log(check(4)); 
 
 // --- حل السؤال 6 هنا ---
 
@@ -89,7 +97,15 @@ console.log(helloName("Ali"));
 //    إذا الدرجة >= 50 اطبع "ناجح"
 //    غير ذلك اطبع "راسب"
 
-
+function checkTheGrade(grade){
+if (grade >=50) {
+    return "ناجح";
+}
+else {
+    return "راسب"
+}
+};
+console.log(checkTheGrade(90));
 
 
 
@@ -106,14 +122,35 @@ console.log(helloName("Ali"));
 
 // --- حل السؤال 8 هنا ---
 
-
-
-
+function appraisalGrades(score){
+if (score >= 90){
+    return "ممتاز";
+}
+else if(score >= 75 && score <= 89) {
+     return "جيد جدًا";
+}
+else if(score >= 60 && score <= 74) {
+     return "جيد";
+}
+else  {
+     return "ضعيف";
+}
+};
+console.log(appraisalGrades(95));
 
 
 
 // 9) اكتب لوب for يطبع الأرقام من 1 إلى 10
 //    كل رقم بسطر واحد باستخدام console.log
+
+
+function loopTest(i){
+for (i=1;i<=10;i++){
+    console.log(i)
+}
+};
+loopTest();
+
 
 // --- حل السؤال 9 هنا ---
 

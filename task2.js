@@ -250,3 +250,17 @@ addGrade(Noor, 77);
 addGrade(Noor, 69);
 
 printAllStudents();
+
+
+
+
+
+
+
+module.exports={
+students,
+nextId,
+createStudent,
+addStudent,
+addGrade
+}

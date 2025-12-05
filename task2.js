@@ -258,8 +258,8 @@ printAllStudents();
 
 
 module.exports={
-students,
-nextId,
+    students,
+    nextId,
 createStudent,
 addStudent,
 addGrade

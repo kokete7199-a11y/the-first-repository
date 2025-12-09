@@ -101,7 +101,7 @@ function printAllTeachers() {
     console.log("لا يوجد مدرسين")
 }
 else{
-  for(let i=0 ; i< teachers.length[i] ; i++ ) {
+  for(let i=0 ; i< teachers.length ; i++ ) {
 
  printTeacherReport(teachers[i]);
 
@@ -117,18 +117,26 @@ else{
 // ---------------------------------------
 function findTeacherByName(name) {
   
- for(let i=0 ; i< teachers.length[i] ; i++ ) {
+ for(let i=0 ; i< teachers.length ; i++ ) {
   if( teachers[i].name===name){
     return teachers[i];
   }
   else{
-    return "undefine"
+    return "undefined"
   }
  }
 
 }
 
 
-
+module.exports={
+ teachers,
+  createTeacher,
+  addTeacher,
+  assignStudentToTeacher,
+  printTeacherReport,
+  printAllTeachers,
+  findTeacherByName
+}
 
 // نخلي الدوال متاحة للملف الرئيسي

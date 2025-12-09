@@ -258,9 +258,13 @@ printAllStudents();
 
 
 module.exports={
-    students,
-    nextId,
-createStudent,
-addStudent,
-addGrade
+  students,
+  createStudent,
+  addStudent,
+  addGrade,
+  printStudentReport,
+  printAllStudents,
+  getAverage,
+  getStatus,
+  findStudentByName
 }

@@ -57,7 +57,7 @@ function addTeacher(teacher) {
 // - نقدر نخزن الطالب كامل، أو بس اسمه، براحتكم
 // ---------------------------------------
 function assignStudentToTeacher(teacher, student) {
- 
+
 teacher.students=student;
 
 }
@@ -75,17 +75,18 @@ teacher.students=student;
 // Students: لا يوجد طلاب بعد
 // ---------------------------------------
 function printTeacherReport(teacher) {
- 
-
-
-
-
-
-
-
-
-    
-    
+console.log("==========================================")
+console.log(`Teacher #${teacher.id} - ${teacher.name}  (subject: ${teacher.subject}) `)
+if (teacher.students.length===0){
+    console.log("لا يوجد طلاب بعد")
+}
+else{
+    console.log("student:");
+    for(let i=0;i<teacher.students.length;i++){
+    const s =teacher.students[i];
+    console.log(`- ${s.name} (Age: ${s.age})`);
+    }
+}   
 }
 
 // ---------------------------------------
@@ -96,7 +97,16 @@ function printTeacherReport(teacher) {
 // وتستدعي printTeacherReport لكل مدرس
 // ---------------------------------------
 function printAllTeachers() {
-  // اكتب الكود هنا
+  if (teachers.length === 0) {
+    console.log("لا يوجد مدرسين")
+}
+else{
+  for(let i=0 ; i< teachers.length[i] ; i++ ) {
+
+ printTeacherReport(teachers[i]);
+
+  }
+}
 }
 
 // ---------------------------------------
@@ -106,7 +116,19 @@ function printAllTeachers() {
 // إذا ما لقت ترجع undefined
 // ---------------------------------------
 function findTeacherByName(name) {
-  // اكتب الكود هنا (اختياري)
+  
+ for(let i=0 ; i< teachers.length[i] ; i++ ) {
+  if( teachers[i].name===name){
+    return teachers[i];
+  }
+  else{
+    return "undefine"
+  }
+ }
+
 }
+
+
+
 
 // نخلي الدوال متاحة للملف الرئيسي

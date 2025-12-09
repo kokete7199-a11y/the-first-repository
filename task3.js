@@ -42,7 +42,11 @@ function createTeacher(name, subject) {
 // ---------------------------------------
 function addTeacher(teacher) {
 
+
+   teachers [teachers.length]=teacher;
+
 }
+
 
 // ---------------------------------------
 // TODO 3:
@@ -53,7 +57,9 @@ function addTeacher(teacher) {
 // - نقدر نخزن الطالب كامل، أو بس اسمه، براحتكم
 // ---------------------------------------
 function assignStudentToTeacher(teacher, student) {
-  // اكتب الكود هنا
+ 
+teacher.students=student;
+
 }
 
 // ---------------------------------------
@@ -69,7 +75,17 @@ function assignStudentToTeacher(teacher, student) {
 // Students: لا يوجد طلاب بعد
 // ---------------------------------------
 function printTeacherReport(teacher) {
-  // اكتب الكود هنا
+ 
+
+
+
+
+
+
+
+
+    
+    
 }
 
 // ---------------------------------------

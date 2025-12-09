@@ -58,7 +58,8 @@ function addTeacher(teacher) {
 // ---------------------------------------
 function assignStudentToTeacher(teacher, student) {
 
-teacher.students=student;
+teacher.students[teacher.students.length] = student;
+
 
 }
 

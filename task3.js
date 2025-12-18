@@ -55,7 +55,7 @@ function addTeacher(teacher) {
 // ملاحظة:
 // - الطالب يجي كـ object من ملف الطلاب (createStudent)
 // - نقدر نخزن الطالب كامل، أو بس اسمه، براحتكم
-// ---------------------------------------
+// --------------------------------------- 
 function assignStudentToTeacher(teacher, student) {
 
 teacher.students[teacher.students.length] = student;
